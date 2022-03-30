@@ -1,1 +1,3 @@
-# viewing_party_refactor
+# Viewing Party Refactor
+
+Representing Viewing Party data with objects
