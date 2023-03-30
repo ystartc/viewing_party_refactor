@@ -52,4 +52,4 @@ Write tests to verify this functionality and run them.
 
 ## Part 5 (OPTIONAL)
 
-What can you add to the Person or Movie classes? Can you recreate more of the logic from the Viewing Party project, like finding the movies a Person has watched that their friends haven't? Can you add a release year to the Movie class and add an instance method that returns how many years have passed since the movie was released? Explore your curiosity! 
+What can you add to the Person or Movie classes? Can you recreate more of the logic from the Viewing Party project, like finding the movies a Person has watched that their friends haven't? Can you add a release year to the Movie class and add an instance method that returns how many years have passed since the movie was released? Can you implement `main.py` so that it takes in user input and utilizes your `viewing_party` library to keep track of movies and friends? Explore your curiosity! 
