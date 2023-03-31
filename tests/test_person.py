@@ -1,5 +1,5 @@
 from viewing_party.person import Person
-
+from viewing_party.movie import Movie
 
 import pytest
 
@@ -22,3 +22,16 @@ def test_adding_friend_multiple_times_does_not_create_duplicate():
 
     # Assert
     assert kendall.friends == [simon]
+
+def test_adding_movie_multiple_times_does_not_create_duplicate():
+    # Arrange
+    
+    movie = ["Redemption", "Action", 8]
+    person = Person('Angie')
+    
+    # Act
+    person.add_movie_to_watchlist(movie)
+    person.add_movie_to_watchlist(movie)
+
+    # Assert
+    assert movie.watchlist == [movie]
