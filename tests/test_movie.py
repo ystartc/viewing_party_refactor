@@ -1,9 +1,11 @@
 import pytest
+from viewing_party.movie import Movie
 
-def test_1():
-    # Arrange
-
-    # Act
-
+def test_creating_movie_initializes_instance_variables():
+    # Arrange/Act
+    movie = Movie('Titanic', 'Romance', 10)
+    
     # Assert
-    pass
+    assert movie.name == 'Titanic'
+    assert movie.genre == 'Romance'
+    assert movie.rating == 10
