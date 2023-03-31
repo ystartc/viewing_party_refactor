@@ -26,7 +26,7 @@ def test_adding_friend_multiple_times_does_not_create_duplicate():
 def test_adding_movie_multiple_times_does_not_create_duplicate():
     # Arrange
     
-    movie = ["Redemption", "Action", 8]
+    movie = Movie("Redemption", "Action", 8)
     person = Person('Angie')
     
     # Act
