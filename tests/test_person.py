@@ -1,5 +1,6 @@
 from viewing_party.person import Person
 
+
 import pytest
 
 def test_creating_person_initializes_instance_variables():
