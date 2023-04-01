@@ -9,4 +9,3 @@ def test_creating_movie_initializes_instance_variables():
     assert movie.name == 'Titanic'
     assert movie.genre == 'Romance'
     assert movie.rating == 10
-
