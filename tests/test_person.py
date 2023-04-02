@@ -76,3 +76,4 @@ def test_watchlist_remain_the_same_when_adding_movie_to_watched_if_was_not_in_wa
     assert person.watched == [movie]
     assert len(person.watched) == 1
     assert person.watchlist == [movie2]
+    assert len(person.watchlist) == 1
