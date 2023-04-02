@@ -34,3 +34,45 @@ def test_adding_movie_multiple_times_does_not_create_duplicate():
 
     # Assert
     assert person.watchlist == [movie]
+    
+def test_adding_movie_to_watched_list_does_not_create_dublicate():
+    # Arrange
+    movie = Movie("Doctor Strange", "Action", 10)
+    person = Person('Clark')
+    
+    # Act
+    person.add_movie_to_watched(movie)
+    person.add_movie_to_watched(movie)
+
+    # Assert
+    assert person.watched == [movie]
+    assert len(person.watched) == 1
+    
+def test_adding_movie_to_watched_removes_it_from_watchlist():
+    # Arrange
+    movie = Movie("Naruto", "Anime", 8)
+    person = Person('Aman')
+    
+    # Act
+    person.add_movie_to_watchlist(movie)
+    person.add_movie_to_watched(movie)
+
+    # Assert
+    assert person.watched == [movie]
+    assert len(person.watched) == 1
+    assert movie not in person.watchlist
+    
+def test_watchlist_remain_the_same_when_adding_movie_to_watched_if_was_not_in_watchlist():
+    # Arrange
+    movie = Movie("Harry Potter", "Fantasy", 10)
+    movie2 = Movie("Naruto", "Anime", 8)
+    person = Person('Ronald')
+    
+    # Act
+    person.add_movie_to_watchlist(movie2)
+    person.add_movie_to_watched(movie)
+
+    # Assert
+    assert person.watched == [movie]
+    assert len(person.watched) == 1
+    assert person.watchlist == [movie2]
